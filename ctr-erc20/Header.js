@@ -1,5 +1,5 @@
-import './bulma/bulma.css';
 
+import 'bulma/css/bulma.min.css';
 function Header(props){
   return(
     <>
