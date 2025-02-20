@@ -8,9 +8,9 @@ async function main(){
   const Token = await ethers.getContractFactory("CounterToken");
   const token = await Token.deploy();
   //ethers v5
-  //await token.deployed();
+  await token.deployed();
   //ethers v6+
-  await token.waitForDeployment();
+  //await token.waitForDeployment();
   for(i=0;i<10;i++){
     await token.increment();
   }
