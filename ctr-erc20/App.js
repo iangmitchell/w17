@@ -1,4 +1,4 @@
-import './App.css';
+import 'bulma/css/bulma.min.css';
 import {useEffect, useState} from 'react';
 import TokenArtifact from "./artifacts/Token.json";
 import contractAddress from "./artifacts/contractAddress.json";
@@ -65,14 +65,14 @@ function App() {
   return (
     <>
     <div className="App">
-      <button onClick={_getTokenContractData}>get token data</button>
+      <button className='button is-warning' onClick={_getTokenContractData}>get token data</button>
         <h2> Name: {tokenData.name}</h2>
         <h2> Symbol: {tokenData.symbol}</h2>
         <h2> Counter: {counter}</h2>
-        <button onClick={getBalance}>Get Balance</button>
+        <button className='button is-warning' onClick={getBalance}>Get Balance</button>
         <h2> Balance: {balance}</h2>
-      <button onClick={increment}> Increment </button>
-      <button onClick={decrement}>Decrement</button>
+      <button className='button is-warning' onClick={increment}> Increment </button>
+      <button className='button is-info' onClick={decrement}>Decrement</button>
     </div>
  </>
   );
