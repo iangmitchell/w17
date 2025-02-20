@@ -7,7 +7,10 @@ async function main(){
   //const token = await factory.attach('0x5fbdb2315678afecb367f032d93f642f64180aa3');
   const Token = await ethers.getContractFactory("CounterToken");
   const token = await Token.deploy();
-  await token.deployed();
+  //ethers v5
+  //await token.deployed();
+  //ethers v6+
+  await token.waitForDeployment();
   for(i=0;i<10;i++){
     await token.increment();
   }
