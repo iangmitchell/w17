@@ -1,10 +1,11 @@
-import 'bulma/css/bulma.min.css';
+import 'bulma/css/bulma.css';
 import {useEffect, useState} from 'react';
 import TokenArtifact from "./artifacts/Token.json";
 import contractAddress from "./artifacts/contractAddress.json";
 //import {Contract } from "ethers";
-//import {ethers} from "ethers";
-const ethers = require("ethers");
+// ethers v6
+import {ethers} from "ethers";
+//const ethers = require("ethers");
 const ownerAddress ='0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';
 const iCost = 5;
 const dCost = 7;
@@ -14,7 +15,9 @@ function App() {
   const [balance, setBalance] = useState(0)
   const [tokenData, setTokenData] = useState({}) 
  
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  //const provider = new ethers.providers.Web3Provider(window.ethereum)
+  //v6
+  const provider = new ethers.BrowserProvider(window.ethereum)
   const signer = provider.getSigner()
 
   async function _initialiseContract(init){
