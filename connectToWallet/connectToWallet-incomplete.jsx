@@ -1,4 +1,5 @@
-import Header from './______.js';
+import 'bulma/css/bulma.css'
+import Header from './______';
 import { useEffect, useState } from 'react';
 
 function App() {
