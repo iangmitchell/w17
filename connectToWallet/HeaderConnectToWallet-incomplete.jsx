@@ -1,4 +1,3 @@
-import './bulma/bulma.css';
 
 function Header(){
   return(
